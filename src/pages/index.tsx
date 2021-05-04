@@ -1,6 +1,6 @@
 import { FormEvent, useContext, useState } from "react";
 
-import { AuthContext } from "../../contexts/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 
 import styles from "./home.module.scss";
 
