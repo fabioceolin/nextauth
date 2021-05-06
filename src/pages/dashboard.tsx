@@ -7,7 +7,7 @@ import { useCan } from "../hooks/useCan";
 import { Can } from "../components/Can";
 
 export default function Dashboard() {
-  const { user } = useContext(AuthContext);
+  const { user, signOut } = useContext(AuthContext);
 
   const userCanSeeMetrics = useCan({ permissions: ['metrics.list']});
 
@@ -23,6 +23,8 @@ export default function Dashboard() {
     <Can permissions={['users.list']}>
       <div>Users</div>
     </Can>
+
+    <button onClick={signOut}>Sign out</button>
     </>
   )
 }
